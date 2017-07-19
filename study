@@ -1,0 +1,22 @@
+# node.js
+
+--use_strict 使用严格模式
+
+VS Code在工程目录下还需要一个.vscode的配置目录，里面存放里VS Code需要的配置文件
+
+
+在浏览器中，叫window对象。而在Node.js环境中，也有唯一的全局对象，但不叫window，而叫global
+
+全局属性
+global.console
+
+global.process
+
+如果我们想要在下一次事件响应中执行代码，可以调用process.nextTick()
+
+Node.js进程本身的事件就由process对象来处理。如果我们响应exit事件，就可以在程序即将退出时执行某个回调函数：// 程序即将退出时的回调函数:
+process.on('exit', function (code) {
+    console.log('about to exit with code: ' + code);
+});
+
+从文件中读取的是buffer,转化为字符串 buffer.toString()
