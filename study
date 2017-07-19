@@ -20,3 +20,24 @@ process.on('exit', function (code) {
 });
 
 从文件中读取的是buffer,转化为字符串 buffer.toString()
+
+
+// String -> Buffer
+var buf = new Buffer(text, 'utf-8');
+console.log(buf);
+
+
+如果传入的数据是String，默认按UTF-8编码写入文本文件，如果传入的参数是Buffer，则写入的是二进制文件
+
+
+如果我们要获取文件大小，创建时间等信息，可以使用fs.stat()，它返回一个Stat对象，能告诉我们文件或目录的详细信息：
+
+
+stream
+data事件表示流的数据已经可以读取了，end事件表示这个流已经到末尾了，没有数据可以读取了，error事件表示出错了
+
+
+rs.on('data', function (chunk) {
+    console.log('DATA:')
+    console.log(chunk);
+});
