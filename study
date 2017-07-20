@@ -50,3 +50,24 @@ buf.toJSON() 转化为json
 
 
 注意： 永远使用 var 定义变量以避免引入全局变量，因为全局变量会污染 命名空间，提高代码的耦合风险。
+
+
+util.inherits
+
+Sub 仅仅继承了Base 在*******原型*********中定义的函数，而构造函数内部创造的 base 属 性和 sayHello 函数都没有被 Sub 继承。
+同时，在原型中定义的属性不会被console.log 作为对象的属性输出。
+
+
+util.inspect(object,[showHidden],[depth],[colors])是一个将任意对象转换 为字符串的方法，
+通常用于调试和错误输出。它至少接受一个参数 object，即要转换的对象
+
+var array1=[1,2,3];  
+array1.forEach(function(item,index){  
+    console.log(item+'---'+index);  
+}); 
+
+
+
+Get : 整个请求内容都在url中，通过解析url就可以查询到提交的内容
+
+post: 请求的具体内容在请求体中，需要读取请求体，得到里面内容，然后再返回
