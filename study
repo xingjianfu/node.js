@@ -41,3 +41,12 @@ rs.on('data', function (chunk) {
     console.log('DATA:')
     console.log(chunk);
 });
+
+
+buffer用于存储二进制数据
+buffer.write 写入缓冲区，buffer.toString()从缓冲区当中读取
+
+buf.toJSON() 转化为json
+
+
+注意： 永远使用 var 定义变量以避免引入全局变量，因为全局变量会污染 命名空间，提高代码的耦合风险。
